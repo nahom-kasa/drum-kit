@@ -1,177 +1,68 @@
 @import url('https://fonts.cdnfonts.com/css/arvo');
 
-body {
-    background: #19172e;
-    font-family: 'Arova', cursive;
-}
-h1{
-    font-size: 3.4rem;
-    color: white;
-    font-family: 'Arova', cursive;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
+html, body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  font-family: 'sans';
+  font-size: 10px;
+  background: #19172e;
+  user-select: none;
+  height: 100vh;
 }
 
-.buttons{
-    height: 50vh;
-    width: 800vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    left: 150px;
-    font-family: 'Arova', cursive;
-    margin-top: 85px;
+h1 {
+  font-size: 5.5rem;
+  color: #FEFFE2;
+  font-family: "Arvo", cursive;
+  text-align: center;
+  margin-bottom: 0;
+} 
+label {
+  font-weight: 100;
+  color: #bb86fc;
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: bolder;
+  font-family: monospace;
 }
-label{
-    color: #bb86fc;
-    font-size: 12px;
-    margin-top: 10px;
-    font-weight: bolder;
-    font-family: monospace;
-    
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 button{
-    height: 100px;
-    width: 110vw;
-    border:solid 5px white;
-    background: #212121;
-    border-radius: 5px;
-    font-size: 35px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace;
-
+  
+  border: .4rem solid white;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 78pt;
+  text-align: center;
+  color: white;
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+footer {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  padding: 5px;
 }
 
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 95px;
-    font-family: 'Arova', cursive;
-    color: white;
-}
-
-a{
-    color: white;
-}
-
-/* Default styles (for larger screens) */
-body {
-    background: #19172e;
-    font-family: 'Arova', cursive;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    color: white;
-    font-family: 'Arova', cursive;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .buttons {
-    height: 50vh;
-    width: 80vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 85px;
-  }
-  
-  label {
-    color: #bb86fc;
-    font-size: 16px;
-    margin-top: 10px;
-    font-weight: bolder;
-    font-family: monospace;
-  }
-  
-  button {
-    height: 100px;
-    width: 110px;
-    border: solid 5px white;
-    background: #212121;
-    border-radius: 5px;
-    font-size: 35px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace;
-  }
-  
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 95px;
-    font-family: 'Arova', cursive;
-    color: white;
-  }
-  
-  /* Styles for smaller screens (e.g., smartphones) */
-  @media screen and (max-width: 767px) {
-    h1 {
-      font-size: 2.4rem;
-    }
-  
-    .buttons {
-      width: 90vw;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: auto;
-      margin-top: 50px;
-    }
-  
-    button {
-      margin: 20px 0;
-    }
-  
-    label {
-      font-size: 12px;
-    }
-  
-    footer {
-      margin-top: 50px;
-    }
-  }
-  
-  /* Styles for larger screens (e.g., desktops) */
-  @media screen and (min-width: 1200px) {
-    h1 {
-      font-size: 4rem;
-    }
-  
-    .buttons {
-      width: 70vw;
-    }
-  
-    button {
-      height: 120px;
-      width: 130px;
-      font-size: 40px;
-    }
-  
-    label {
-      font-size: 18px;
-    }
-  
-    footer {
-      margin-top: 120px;
-    }
+.playing {
+    transform: scale(1.1);
+    border-color: #bb86fc;
+    box-shadow: 0 0 1rem #bb86fc;
   }
