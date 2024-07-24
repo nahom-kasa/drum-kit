@@ -15,10 +15,8 @@ h1{
 }
 
 .buttons{
-    height: 50vh;
-    width: 800vw;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     position: relative;
@@ -35,18 +33,16 @@ label{
     
 }
 button{
-    height: 100px;
-    width: 110vw;
-    border:solid 5px white;
-    background: #212121;
-    border-radius: 5px;
-    font-size: 35px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace;
+  border: .4rem solid white;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 78pt;
+  text-align: center;
+  color: white;
+  background-color: #212121;
 
 }
 
@@ -82,14 +78,15 @@ body {
   }
   
   .buttons {
-    height: 50vh;
-    width: 80vw;
+    height: 20vh;
+    width: 1000px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin-top: 85px;
   }
+  
   
   label {
     color: #bb86fc;
@@ -115,12 +112,11 @@ body {
   }
   
   footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 95px;
-    font-family: 'Arova', cursive;
-    color: white;
+    text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  padding: 5px;
   }
   
   /* Styles for smaller screens (e.g., smartphones) */
