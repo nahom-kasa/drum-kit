@@ -1,22 +1,23 @@
+const keys = ["a", "s", "d", "f", "g", "h", "j", "k", "l"];
+const elements = keys.map((key) => document.querySelector(`.${key}`));
+
 document.body.addEventListener("keydown", (e) => {
-  let keyPressValue = e.key;
-  let check =
-    e.key === "a" ||
-    e.key === "s" ||
-    e.key === "d" ||
-    e.key === "f" ||
-    e.key === "g" ||
-    e.key === "h" ||
-    e.key === "j" ||
-    e.key === "k" ||
-    e.key === "l";
-  if (check) {
-    window[keyPressValue]();
+  const index = keys.indexOf(e.key.toLowerCase());
+  if (index !== -1) {
+    elements[index].classList.add("playing");
+    window[keys[index]]();
+    setTimeout(() => {
+      elements[index].classList.remove("playing");
+    }, 200);
   }
 });
+
 document.body.addEventListener("click", (e) => {
-  let className = e.target.className;
-  window[className];
+  const clickedElement = e.target.closest(`.${keys.join(", .")}`);
+  if (clickedElement) {
+    const className = clickedElement.className;
+    window[className]();
+  }
 });
 
 function a() {
